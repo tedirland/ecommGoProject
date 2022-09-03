@@ -8,5 +8,7 @@ import (
 
 func (app *applicaiton) routes() http.Handler {
 	mux := chi.NewRouter()
+
+	mux.Get("/virtual-terminal", app.VirtualTerminal)
 	return mux
 }
